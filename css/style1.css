@@ -1,0 +1,101 @@
+html
+{
+  font-family: "sans-serif";
+}
+body
+{
+  margin: 0;
+  padding:0;
+  background: url('image.png');
+}
+ul
+{
+  margin: 0;
+  padding: 0;
+  background: #593D07;
+  opacity: 0.5;
+  position: relative;
+}
+ul li
+{
+  padding:20px;
+  font-size: 20px;
+  display: inline-block;
+}
+ul li a
+{
+  color: red;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+ul li:hover
+{
+  background:white;
+}
+
+ul ul
+{
+  position: absolute;
+  min-width: 200px;
+  background: lightblue;
+  display: block;
+}
+
+ul li ul li
+{
+  display: none;
+  background: black;
+}
+
+ul li:hover ul li
+{
+
+    display: block;
+    position: relative;
+}
+
+ul li i
+{
+    color:grey;
+    float: right;
+    padding-left: 22px;
+}
+
+nav div
+{
+  background: lightblue;
+  font-size: 20px;
+  padding: 0.6em;
+  cursor: pointer;
+  display: none;
+}
+
+@media(max-width: 800px)
+{
+  nav div{
+    display: block;
+  }
+  ul{
+    display: block;
+    transform: translateX(-105%);
+    position: relative;
+    background: #001f44;
+  }
+
+  .ham-menu--open {
+    transform: translateX(0);
+  }
+  ul li{
+    display: block;
+  }
+  ul li ul{
+    display: block;
+    position: absolute;
+    transform: translateX(0);
+    background: #001f44;
+  }
+  ul li:hover ul{
+
+  }
+}
